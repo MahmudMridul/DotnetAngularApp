@@ -1,0 +1,8 @@
+# create new solution file 
+  dotnet new sln
+
+# create new api project in a folder
+  dotnet new webapi -o folder_name
+
+# add project to solution file
+  dotnet sln add project_name
