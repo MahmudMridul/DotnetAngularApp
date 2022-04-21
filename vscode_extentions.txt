@@ -2,3 +2,4 @@ C# powered by omnisharp
 C# extensions
 material icon theme
 nuget gallery
+sqlite
