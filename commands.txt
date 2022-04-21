@@ -6,3 +6,21 @@
 
 # add project to solution file
   dotnet sln add project_name
+
+# build and run API project
+  dotnet run
+
+# to make browser trust https addess
+  dotnet dev-certs https --trust
+
+# build and run API project | also rebuild automatically when any changes made to any file
+  dotnet watch run
+
+# download and install dotnet ef
+  dotnet tool install --global dotnet-ef --version 5.0.11
+
+# create a migration spacifying output folder
+  dotnet ef migrations add name_of_migration -o output_folder
+
+# update database
+  dotnet ef database update
