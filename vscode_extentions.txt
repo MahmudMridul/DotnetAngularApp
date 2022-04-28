@@ -3,3 +3,5 @@ C# extensions
 material icon theme
 nuget gallery
 sqlite
+angular language service
+
