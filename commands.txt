@@ -24,3 +24,20 @@
 
 # update database
   dotnet ef database update
+
+# install angular 12
+  npm install -g @angular/cli@12
+
+# create new angular project named client with strict mode off
+  ng new client --strict false
+
+# compile angular project
+  ng serve
+
+# add bootstrap 4 to angular
+  ng add ngx-bootstrap
+
+# add font awesome to angular project
+  npm install font-awesome
+
+
