@@ -447,6 +447,7 @@ appsettings.json
 /node_modules
 
 /ssl
+/StudentAssets
 
 # profiling files
 chrome-profiler-events*.json
