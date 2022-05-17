@@ -446,6 +446,8 @@ appsettings.json
 # dependencies
 /node_modules
 
+/ssl
+
 # profiling files
 chrome-profiler-events*.json
 
