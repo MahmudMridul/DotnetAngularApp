@@ -25,6 +25,9 @@
 # update database
   dotnet ef database update
 
+# drop database
+  dotnet ef database drop
+
 # install angular 12
   npm install -g @angular/cli@12
 
