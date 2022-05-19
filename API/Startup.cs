@@ -15,6 +15,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using API.Extensions;
 
 namespace API
 {
@@ -31,14 +35,7 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //addscoped sets the life cycle of service.
-            //here the life cycle of this service is equal to http request
-            //when request is created life cycle starts, when request is completed
-            //life cycle ends
-            services.AddScoped<ITokenService, TokenService>(); 
-            services.AddDbContext<DataContext>(options =>
-                options.UseSqlite(_config.GetConnectionString("DefaultConnection"))
-            );
+            services.AddApplicationServices(_config);
             
             services.AddControllers();
 
@@ -57,6 +54,8 @@ namespace API
                     );
                 }
             );
+
+            services.AddIdentityServices(_config);
 
             services.AddSwaggerGen(c =>
             {
@@ -77,6 +76,8 @@ namespace API
             app.UseCors("AllowAll");
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
